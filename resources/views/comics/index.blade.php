@@ -36,7 +36,7 @@
                                 <td>{{ $item->series}}</td>
                                 <td>{{ $item->sale_date}}</td>
                                 <td>{{ $item->type}}</td>
-                                <td></td>
+                                <td><a href="{{route ('comics.show',['id'=> $item->id])}}">vai al fumetto</a></td>
                             </tr>
                         </tbody>
                     </table>
