@@ -16,4 +16,10 @@ class PageController extends Controller
         ];
         return view('comics.index',$data);
     }
+
+    public function show($id){
+        $comic= Comic::find($id);
+        return view('comics.show',compact('comic'));
+    }
+
 }

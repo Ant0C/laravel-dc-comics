@@ -16,3 +16,5 @@ use App\Http\Controllers\Guest\PageController;
 Route::get('/', function () {return view('welcome');});
 
 Route::get('/comics',[PageController::class,'index'])->name('comics.index');
+
+Route::get('/comics/{id}',[PageController::class,'show'])->name('comics.show');
