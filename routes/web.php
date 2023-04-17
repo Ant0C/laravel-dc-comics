@@ -21,3 +21,5 @@ Route::get('/comics/create',[PageController::class,'create'])->name('comics.crea
 
 Route::get('/comics/{id}',[PageController::class,'show'])->name('comics.show');
 
+Route::post('/comics', [PageController::class, 'store'])->name('comics.store');
+
