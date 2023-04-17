@@ -44,4 +44,25 @@ class PageController extends Controller
         return redirect()->route('comics.show', $comic);
 
     }
+
+    public function edit(Comic $id){
+        return view ('comics.edit',compact('id'));
+    }
+
+    public function update(Request $request, Comic $id){
+        $data = $request->all();
+
+        $edit_comic->title = $data['title'];
+        $edit_comic->description = $data['description'];
+        $edit_comic->thumb = $data['thumb'];
+        $edit_comic->price = $data['price'];
+        $edit_comic->series = $data['series'];
+        $edit_comic->sale_date = $data['sale_date'];
+        $edit_comic->type = $data['type'];
+
+        $edit_comic->save();
+
+        return redirect()->route('comics.show', $edit_comic);
+
+    }
 }
