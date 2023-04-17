@@ -29,7 +29,7 @@ class PageController extends Controller
     public function store(Request $request){
         $data = $request->all();
 
-        $comic = new Comic;
+        $comic = new Comic();
 
         $comic->title = $data['title'];
         $comic->description = $data['description'];
