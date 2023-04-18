@@ -52,17 +52,17 @@ class PageController extends Controller
     public function update(Request $request, Comic $id){
         $data = $request->all();
 
-        $edit_comic->title = $data['title'];
-        $edit_comic->description = $data['description'];
-        $edit_comic->thumb = $data['thumb'];
-        $edit_comic->price = $data['price'];
-        $edit_comic->series = $data['series'];
-        $edit_comic->sale_date = $data['sale_date'];
-        $edit_comic->type = $data['type'];
+        $id->title = $data['title'];
+        $id->description = $data['description'];
+        $id->thumb = $data['thumb'];
+        $id->price = $data['price'];
+        $id->series = $data['series'];
+        $id->sale_date = $data['sale_date'];
+        $id->type = $data['type'];
 
-        $edit_comic->save();
+        $id->save();
 
-        return redirect()->route('comics.show', $edit_comic);
+        return redirect()->route('comics.show', $id);
 
     }
 

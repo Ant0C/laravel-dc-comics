@@ -16,9 +16,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Description</th>
                                 <th scope="col">img</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Title</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Series</th>
                                 <th scope="col">Date</th>
@@ -29,9 +29,9 @@
                         <tbody>
                             <tr>
                                 <th scope="row">{{ $item->id}}</th>
+                                <td><img src="{{$item->thumb}}" alt="" class="" style="width: 25%"></td>
                                 <td>{{ $item->title}}</td>
                                 <td>{{ $item->description}}</td>
-                                <td><img src="{{$item->thumb}}" alt="" class=""></td>
                                 <td>{{ $item->price}}€</td>
                                 <td>{{ $item->series}}</td>
                                 <td>{{ $item->sale_date}}</td>

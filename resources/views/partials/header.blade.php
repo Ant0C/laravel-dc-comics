@@ -1,15 +1,14 @@
 
-<div>
-    <ul>
+<div class="header">
+    <ul class="row">
         <li>
-            <a href="{{route ('comics.index')}}">Home</a>
+            <a href="{{route ('comics.index')}}" >Home</a>
         </li>
         <li>
-        <a href="{{route ('comics.create')}}">Nuovo Fumetto</a>
+            <a href="{{route ('comics.create')}}" >Nuovo Fumetto</a>
         </li>
-
         <li>
-            Contatti
+            <a href="" > Contatti </a>
         </li>
     </ul>
 </div>
