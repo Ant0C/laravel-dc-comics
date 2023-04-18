@@ -65,4 +65,10 @@ class PageController extends Controller
         return redirect()->route('comics.show', $edit_comic);
 
     }
+
+    public function destroy(Comic $id){
+        $id->delete();
+        return to_route('comics.index');
+
+    }
 }

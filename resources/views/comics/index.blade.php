@@ -37,6 +37,14 @@
                                 <td>{{ $item->sale_date}}</td>
                                 <td>{{ $item->type}}</td>
                                 <td><a href="{{route ('comics.show',['id'=> $item->id])}}">vai al fumetto</a></td>
+                                <td><a href="{{route ('comics.edit',$item)}}">MODIFICA</a></td>
+                                <td>
+                                    <form action="{{route ('comics.destroy',$item)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit" class="btn btn-danger btn-sm" value="DELETE">
+                                    </form>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
